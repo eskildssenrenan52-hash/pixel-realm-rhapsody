@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Frame, Panel, PixelButton, RobotSprite } from "../components/pixel";
-import { ITEMS } from "../game/config";
-import { addGold, addItem, lockedRobotIds, unlockRobot, useGame } from "../game/save";
-import { faceUrl, ROBOT_MAP } from "../game/robots";
-import { TopBar } from "./roster";
+import { Frame, Panel, PixelButton, RobotSprite } from "@/components/game/pixel";
+import { ITEMS } from "@/game/config";
+import { addGold, addItem, lockedRobotIds, unlockRobot, useGame } from "@/game/save";
+import { faceUrl, ROBOT_MAP } from "@/game/robots";
+import { TopBar } from "@/screens/roster";
 
 export function ShopScreen({ onBack }: { onBack: () => void }) {
   const g = useGame();

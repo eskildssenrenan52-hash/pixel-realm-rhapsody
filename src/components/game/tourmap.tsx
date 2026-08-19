@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Icon, PixelButton } from "./pixel";
-import { faceUrl, ROBOT_MAP } from "../game/robots";
-import { MAP_HEIGHT, MAP_WIDTH, TOURNAMENTS, type TournamentDef } from "../game/tournaments";
+import { Icon, PixelButton } from "@/components/game/pixel";
+import { faceUrl, ROBOT_MAP } from "@/game/robots";
+import { MAP_HEIGHT, MAP_WIDTH, TOURNAMENTS, type TournamentDef } from "@/game/tournaments";
 
 const NODE = 96;
 

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Frame, Icon, Panel, PixelButton, RobotSprite, StatBar } from "../components/pixel";
-import { TRAIN_COST_PER_POINT } from "../game/config";
-import { baseStats, maxTrained, robotMaxXP, type RobotSave } from "../game/engine";
-import { addGold, setTeam, updateRobots, useGame } from "../game/save";
-import { faceUrl, ROBOT_MAP, ROBOTS } from "../game/robots";
+import { Frame, Icon, Panel, PixelButton, RobotSprite, StatBar } from "@/components/game/pixel";
+import { TRAIN_COST_PER_POINT } from "@/game/config";
+import { baseStats, maxTrained, robotMaxXP, type RobotSave } from "@/game/engine";
+import { addGold, setTeam, updateRobots, useGame } from "@/game/save";
+import { faceUrl, ROBOT_MAP, ROBOTS } from "@/game/robots";
 
 export function RosterScreen({ onBack }: { onBack: () => void }) {
   const g = useGame();

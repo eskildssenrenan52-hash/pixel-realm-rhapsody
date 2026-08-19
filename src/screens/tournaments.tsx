@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Icon, Panel, PixelButton, RobotSprite, StatBar } from "../components/pixel";
-import { TournamentMap } from "../components/tourmap";
-import { fightReward, grantXP, robotMaxXP, type RobotSave } from "../game/engine";
+import { Icon, Panel, PixelButton, RobotSprite, StatBar } from "@/components/game/pixel";
+import { TournamentMap } from "@/components/game/tourmap";
+import { fightReward, grantXP, robotMaxXP, type RobotSave } from "@/game/engine";
 import {
   addGold,
   addItem,
@@ -13,11 +13,11 @@ import {
   unlockRobot,
   updateRobots,
   useGame,
-} from "../game/save";
-import { faceUrl, ROBOT_MAP } from "../game/robots";
-import { type TournamentDef } from "../game/tournaments";
-import { BattleScreen } from "./battle";
-import { TopBar } from "./roster";
+} from "@/game/save";
+import { faceUrl, ROBOT_MAP } from "@/game/robots";
+import { type TournamentDef } from "@/game/tournaments";
+import { BattleScreen } from "@/screens/battle";
+import { TopBar } from "@/screens/roster";
 
 type Mode = "list" | "brief" | "fight" | "report";
 

@@ -1,7 +1,7 @@
-import { Icon, PixelButton, RobotSprite } from "../components/pixel";
-import { playerMaxXP } from "../game/engine";
-import { useGame } from "../game/save";
-import { StatBar } from "../components/pixel";
+import { Icon, PixelButton, RobotSprite } from "@/components/game/pixel";
+import { playerMaxXP } from "@/game/engine";
+import { useGame } from "@/game/save";
+import { StatBar } from "@/components/game/pixel";
 
 export type Screen = "menu" | "roster" | "shop" | "tournaments";
 

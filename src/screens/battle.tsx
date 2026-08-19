@@ -7,7 +7,7 @@ import {
   RobotSprite,
   StatBar,
   VfxSprite,
-} from "../components/pixel";
+} from "@/components/game/pixel";
 import {
   activeOf,
   applyForcedSwap,
@@ -18,10 +18,10 @@ import {
   type BattleAction,
   type BattleEvent,
   type Side,
-} from "../game/battle";
-import { ITEM_MAP } from "../game/config";
-import type { RobotSave } from "../game/engine";
-import { faceUrl, ROBOT_MAP } from "../game/robots";
+} from "@/game/battle";
+import { ITEM_MAP } from "@/game/config";
+import type { RobotSave } from "@/game/engine";
+import { faceUrl, ROBOT_MAP } from "@/game/robots";
 
 type Clip = "idle" | "attack" | "damage" | "guard" | "enter";
 type Menu = "root" | "skills" | "items" | "swap";

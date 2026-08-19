@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ANIM, FRAME, FRAMES, spriteUrl } from "../game/robots";
+import { ANIM, FRAME, FRAMES, spriteUrl } from "@/game/robots";
 
 type Clip = keyof typeof ANIM;
 
