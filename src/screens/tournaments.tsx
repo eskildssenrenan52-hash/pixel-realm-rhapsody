@@ -144,6 +144,7 @@ export function TournamentsScreen({ onBack }: { onBack: () => void }) {
       <BattleScreen
         key={`${tour.id}-${fightIndex}`}
         arena={tour.arena}
+        round={fightIndex}
         playerTeam={team}
         enemyTeam={enemyTeamFor(tour, fightIndex)}
         items={g.items}

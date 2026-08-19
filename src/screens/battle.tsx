@@ -43,6 +43,7 @@ const TONE_COLOR: Record<string, string> = {
 
 export function BattleScreen({
   arena,
+  round,
   playerTeam,
   enemyTeam,
   items,
@@ -51,6 +52,7 @@ export function BattleScreen({
   onUseItem,
 }: {
   arena: string;
+  round?: number;
   playerTeam: RobotSave[];
   enemyTeam: RobotSave[];
   items: Record<string, number>;
@@ -151,7 +153,7 @@ export function BattleScreen({
 
   return (
     <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
-      <ArenaBackdrop arena={arena} />
+      <ArenaBackdrop arena={arena} round={round} />
 
       {/* HUD superior */}
       <div style={{ position: "absolute", top: 8, left: 8, right: 8, display: "flex", gap: 8 }}>
