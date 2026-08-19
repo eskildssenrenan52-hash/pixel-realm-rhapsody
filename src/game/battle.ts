@@ -468,7 +468,7 @@ export function resolveTurn(
 
   if (!ctx.b.result) {
     ctx.b.turn += 1;
-    if (ctx.b.phase !== "forced_swap") ctx.b.phase = "menu";
+    if ((ctx.b.phase as string) !== "forced_swap") ctx.b.phase = "menu";
     sync(ctx);
   }
 
