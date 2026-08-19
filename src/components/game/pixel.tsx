@@ -265,12 +265,21 @@ export function Frame({
   );
 }
 
-export function ArenaBackdrop({ arena, children }: { arena: string; children?: React.ReactNode }) {
+export function ArenaBackdrop({
+  arena,
+  round,
+  children,
+}: {
+  arena: string;
+  round?: number;
+  children?: React.ReactNode;
+}) {
   const [f, setF] = useState(1);
   useEffect(() => {
     const id = window.setInterval(() => setF((p) => (p % 4) + 1), 250);
     return () => window.clearInterval(id);
   }, []);
+  const videoSrc = round === undefined ? null : `/videos/round${(round % 5) + 1}.mp4`;
   return (
     <div
       style={{
@@ -282,7 +291,35 @@ export function ArenaBackdrop({ arena, children }: { arena: string; children?: R
         imageRendering: "pixelated",
       }}
     >
-      {children}
+      {videoSrc && (
+        <video
+          key={videoSrc}
+          src={videoSrc}
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            imageRendering: "pixelated",
+          }}
+        />
+      )}
+      {videoSrc && (
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(rgba(4,9,18,0.35), rgba(4,9,18,0.15) 45%, rgba(4,9,18,0.6))",
+          }}
+        />
+      )}
+      <div style={{ position: "relative", height: "100%" }}>{children}</div>
     </div>
   );
 }
