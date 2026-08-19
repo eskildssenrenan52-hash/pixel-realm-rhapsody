@@ -363,8 +363,13 @@ function TournamentCard({
   return (
     <div
       style={{
-        borderTop: "2px solid var(--mk-accent)",
-        background: "rgba(4,9,18,0.97)",
+        borderTop: "2px solid var(--mk-accent2)",
+        boxShadow: "0 -8px 0 rgba(53,226,240,0.18), 0 -22px 40px rgba(0,0,0,0.7)",
+        backgroundImage:
+          "linear-gradient(rgba(4,9,18,0.72), rgba(4,9,18,0.93)), url(/ui/bg_tour_modal.png)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        imageRendering: "pixelated",
         padding: 0,
         flexShrink: 0,
       }}
