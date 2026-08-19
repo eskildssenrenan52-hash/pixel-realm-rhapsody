@@ -440,14 +440,16 @@ export function resolveTurn(
   ctx.b.phase = "resolving";
   const enemyAction = chooseAIAction(ctx.b);
 
-  const order: { side: Side; action: BattleAction }[] = [
+  const steps: { side: Side; action: BattleAction }[] = [
     { side: "player", action: playerAction },
     { side: "enemy", action: enemyAction },
-  ].sort((a, b) => {
+  ];
+  const order = steps.sort((a, b) => {
     const dp = priority(b.action) - priority(a.action);
     if (dp !== 0) return dp;
     return activeOf(ctx.b, b.side).agl - activeOf(ctx.b, a.side).agl;
-  }) as { side: Side; action: BattleAction }[];
+  });
+
 
   for (const step of order) {
     if (ctx.b.result) break;
